@@ -266,7 +266,7 @@ html {
 
 .work-card {
   position: relative;
-  min-height: 260px;
+  min-height: 420px;
   padding: 28px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 28px;
@@ -299,7 +299,7 @@ html {
 }
 
 .work-card h3 {
-  margin: 88px 0 12px;
+  margin: 24px 0 10px;
   font-size: 24px;
   font-weight: 500;
   letter-spacing: -0.04em;
@@ -331,4 +331,154 @@ html {
   .work-card {
     min-height: 220px;
   }
+}
+
+.work-image {
+  position: relative;
+  height: 220px;
+  margin: -12px -12px 28px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(150, 165, 255, 0.38), transparent 32%),
+    radial-gradient(circle at 80% 30%, rgba(120, 220, 255, 0.18), transparent 34%),
+    linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.015));
+  overflow: hidden;
+}
+
+.work-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: linear-gradient(to bottom, black, transparent);
+  opacity: 0.6;
+}
+
+.work-arrow {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  display: block;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.45);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.work-card:hover .work-arrow {
+  transform: translateX(6px);
+  color: #ffffff;
+}
+
+.work-card .work-arrow {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  left: auto;
+  top: auto;
+  z-index: 2;
+  display: block;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.45);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.work-card:hover .work-arrow {
+  transform: translateX(6px);
+  color: #ffffff;
+}
+
+/* ==========================
+   Header
+========================== */
+
+.site-header {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.header-inner {
+  width: min(1100px, calc(100% - 40px));
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+
+  background: rgba(15,15,18,.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+}
+
+.logo{
+  color:white;
+  font-size:20px;
+  font-weight:600;
+  letter-spacing:-0.04em;
+  text-decoration:none;
+}
+
+.header-inner nav{
+  display:flex;
+  gap:36px;
+}
+
+.header-inner nav a{
+  color:rgba(255,255,255,.75);
+  text-decoration:none;
+  transition:.25s;
+}
+
+.header-inner nav a:hover{
+  color:white;
+}
+
+.hero-glass{
+    padding-top:120px;
+}
+
+.site-header {
+  transition: 0.35s ease;
+}
+
+.header-inner {
+  transition: 0.35s ease;
+}
+
+body:not(:has(.hero-glass:hover)) .site-header {
+  animation: headerFloat 0.8s ease both;
+}
+
+@keyframes headerFloat {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.site-header.is-scrolled {
+  top: 12px;
+}
+
+.site-header.is-scrolled .header-inner {
+  height: 52px;
+  width: min(920px, calc(100% - 40px));
+  background: rgba(15,15,18,.78);
+  border-color: rgba(255,255,255,.12);
 }
