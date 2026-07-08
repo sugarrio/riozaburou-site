@@ -3,9 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/contact/</loc>
-  </url>
-  <url>
     <loc>http://localhost:1313/</loc>
     <xhtml:link
       rel="alternate"
