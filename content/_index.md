@@ -17,3 +17,5 @@ description: "Digital Creator / VRChat / 3D Works"
     <a href="/about/">About</a>
   </div>
 </div>
+
+<script src="/js/main.js"></script>
