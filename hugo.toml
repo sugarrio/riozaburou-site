@@ -3,3 +3,11 @@ languageCode = "ja"
 title = "riozaburou"
 
 defaultContentLanguage = "ja"
+
+[params]
+customCSS = ["css/custom.css"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

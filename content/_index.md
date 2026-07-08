@@ -1,10 +1,19 @@
 ---
-title: "riozaburou"
-description: "Digital Creator"
+title: ""
+description: "Digital Creator / VRChat / 3D Works"
 ---
 
-# riozaburou
+<div class="hero-glass">
+  <p class="eyebrow">Digital Creator / VRChat / 3D Works</p>
 
-Welcome.
+  <h1>riozaburou</h1>
 
-This website is currently under construction.
+  <p class="hero-text">
+    静かな未来感と、ガラスみたいな透明感で、デジタルのための作品を作っています。
+  </p>
+
+  <div class="hero-links">
+    <a href="/works/">Works</a>
+    <a href="/about/">About</a>
+  </div>
+</div>
