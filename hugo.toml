@@ -1,0 +1,7 @@
+baseURL = 'https://example.org/'
+languageCode = 'ja'
+title = 'riozaburou'
+
+theme = 'blowfish'
+
+defaultContentLanguage = 'ja'
