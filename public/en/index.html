@@ -114,8 +114,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.e92e7c0755cbd793db7f76f87cf04001978f705e9bd1e461ce937a287c6eef977401b9ac9f01df007c6a146a7b95d8cdc821a065bb45bb240e9a7aba362a0564.css"
-    integrity="sha512-6S58B1XL15Pbf3b4fPBAAZePcF6b0eRhzpN6KHxu75d0AbmsnwHfAHxqFGp7ldjNyCGgZbtFuyQOmnq6NioFZA==">
+    href="/css/main.bundle.min.05090d191b5e4d67377bc17d4e22232f1f7e7cb3d32c8a3ef26df1ac1c0031c7bfd3565b4a110355371478b5b3d5e7a4329062ca6c68c5cce34c488d3c2e4b12.css"
+    integrity="sha512-BQkNGRteTWc3e8F9TiIjLx9&#43;fLPTLIo&#43;8m3xrBwAMce/01ZbShEDVTcUeLWz1eekMpBiymxoxczjTEiNPC5LEg==">
 
   
   
@@ -302,12 +302,12 @@
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <p class="hero-eyebrow">Digital Creator / VRChat</p>
+    <p class="hero-eyebrow">Digital Creator / VRChatter</p>
 
     <h1>riozaburou</h1>
 
     <p class="hero-description">
-      Crafting immersive avatars and 3D experiences.
+      I Love SEIKIN TV
     </p>
 
     <div class="hero-buttons">
@@ -328,7 +328,7 @@
     </div>
 
     <div class="works-list">
-      <a href="#" class="work-row image-right">
+      <a href="#" class="work-row image-right reveal-from-right">
         <div class="work-info">
           <span class="work-number">01</span>
           <p class="work-category">VRChat Avatar</p>
@@ -342,7 +342,7 @@
         </div>
       </a>
 
-      <a href="#" class="work-row image-left">
+      <a href="#" class="work-row image-left reveal-from-left">
         <div class="work-info">
           <span class="work-number">02</span>
           <p class="work-category">3D Assets</p>
@@ -356,7 +356,7 @@
         </div>
       </a>
 
-      <a href="#" class="work-row image-right">
+      <a href="#" class="work-row image-right reveal-from-right">
         <div class="work-info">
           <span class="work-number">03</span>
           <p class="work-category">Graphic Design</p>
@@ -374,12 +374,20 @@
 </section>
 
 <section id="profile" class="profile-section">
-  <div class="profile-card">
 
-    <div class="profile-head">
-      <p class="profile-label">Profile</p>
-      <h2>riozaburou</h2>
+    <div class="section-header">
+        <span class="section-label">About</span>
+
+        <h2 class="section-title">
+            Profile
+        </h2>
+
+        <p class="section-description">
+            Digital creator specializing in VRChat avatars, 3D modeling, and immersive virtual experiences.
+        </p>
     </div>
+
+  <div class="profile-card">
 
     <div class="profile-content">
       <div class="profile-avatar">
@@ -387,8 +395,8 @@
     </div>
 
       <div class="profile-info">
-        <p class="profile-role">Digital Creator</p>
-        <p class="profile-subrole">VRChat / 3D Artist</p>
+        <p class="profile-role">riozaburou / sugarrio</p>
+        <p class="profile-subrole">VRChat / 3D / Illustration</p>
 
         <div class="profile-history">
           <div><strong>2000</strong><span>誕生</span></div>
@@ -404,6 +412,9 @@
              <div class="profile-tags">
                <span>3D Modeling</span>
                <span>Avatar Customization</span>
+               <span>Illustration</span>
+               <span>VRChat</span>
+               <span>TBH</span>
              </div>
             </div>
       </div>
@@ -414,9 +425,17 @@
 
 <section id="links" class="links-section">
 
-    <div class="section-title">
-        <span>Links</span>
-    </div>
+    <div class="section-header">
+    <span class="section-label">Connect</span>
+
+    <h2 class="section-title">
+        Links
+    </h2>
+
+    <p class="section-description">
+        Find me across social platforms, creative communities, and virtual worlds.
+    </p>
+</div>
 
     <div class="links-grid">
 
@@ -427,7 +446,7 @@
             <span>X</span>
         </a>
 
-        <a href="https://vrchat.com/home" class="link-card" target="_blank">
+        <a href="https://vrchat.com/home/user/usr_80deb027-2f85-4199-847f-15a9faafcc3b" class="link-card" target="_blank">
             <div class="link-icon">
                 <img src="/icons/vrchat.svg" alt="VRChat">
             </div>
@@ -441,7 +460,7 @@
             <span>Discord</span>
         </a>
 
-        <a href="https://github.com/" class="link-card" target="_blank">
+        <a href="https://github.com/sugarrio?tab=repositories" class="link-card" target="_blank">
             <div class="link-icon">
                 <img src="/icons/github.svg" alt="GitHub">
             </div>
@@ -455,7 +474,7 @@
             <span>BOOTH</span>
         </a>
 
-        <a href="https://store.steampowered.com/" class="link-card" target="_blank">
+        <a href="https://steamcommunity.com/profiles/76561199072545328/" class="link-card" target="_blank">
             <div class="link-icon">
                 <img src="/icons/steam.svg" alt="Steam">
             </div>
@@ -479,6 +498,22 @@
     <p class="footer-copy">© 2026 riozaburou. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  }, {
+    threshold: 0.18
+  });
+
+  document.querySelectorAll(".work-row").forEach((el) => {
+    revealObserver.observe(el);
+  });
+</script>
 
 
         

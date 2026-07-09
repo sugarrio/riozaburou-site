@@ -35,7 +35,7 @@
     </div>
 
     <div class="works-list">
-      <a href="#" class="work-row image-right">
+      <a href="#" class="work-row image-right reveal-from-right">
         <div class="work-info">
           <span class="work-number">01</span>
           <p class="work-category">VRChat Avatar</p>
@@ -49,7 +49,7 @@
         </div>
       </a>
 
-      <a href="#" class="work-row image-left">
+      <a href="#" class="work-row image-left reveal-from-left">
         <div class="work-info">
           <span class="work-number">02</span>
           <p class="work-category">3D Assets</p>
@@ -63,7 +63,7 @@
         </div>
       </a>
 
-      <a href="#" class="work-row image-right">
+      <a href="#" class="work-row image-right reveal-from-right">
         <div class="work-info">
           <span class="work-number">03</span>
           <p class="work-category">Graphic Design</p>
@@ -205,5 +205,22 @@
     <p class="footer-copy">© 2026 riozaburou. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  }, {
+    threshold: 0.18
+  });
+
+  document.querySelectorAll(".work-row").forEach((el) => {
+    revealObserver.observe(el);
+  });
+</script>
+<script src="/js/main.js"></script>
 
 {{ end }}

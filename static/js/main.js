@@ -1,13 +1,13 @@
-const observer = new IntersectionObserver((entries) => {
+const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("is-visible");
     }
   });
 }, {
-  threshold: 0.15
+  threshold: 0.18
 });
 
-document.querySelectorAll(".fade-up").forEach((el) => {
-  observer.observe(el);
+document.querySelectorAll(".work-row, .profile-card, .link-card").forEach((el) => {
+  revealObserver.observe(el);
 });
