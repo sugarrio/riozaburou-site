@@ -273,7 +273,10 @@ a:hover {
 }
 
 .main-content {
+  width: 100%;
   min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .content-box {
@@ -1139,4 +1142,31 @@ a:hover {
     grid-column: auto;
   }
 
+}
+
+/* WELCOME画像 */
+
+.welcome-box {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  margin-bottom: 10px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.welcome-banner,
+.welcome-gif {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+  box-sizing: border-box;
 }
