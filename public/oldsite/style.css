@@ -1,0 +1,30 @@
+body{
+    background:#000080;
+    color:white;
+    font-family:"MS PGothic",sans-serif;
+    text-align:center;
+    margin:0;
+    padding:40px;
+}
+
+h1{
+    color:#ffff00;
+    font-size:42px;
+    text-shadow:3px 3px red;
+}
+
+a{
+    color:#00ffff;
+}
+
+a:visited{
+    color:#ff66ff;
+}
+
+hr{
+    border:1px dashed white;
+}
+
+strong{
+    color:#00ff00;
+}
