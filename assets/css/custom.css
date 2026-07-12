@@ -1046,6 +1046,24 @@ body:not(:has(.hero-glass:hover)) .site-header {
   display: none;
 }
 
+.secret-link {
+  color: rgba(255,255,255,.22);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: .08em;
+  transition: .25s;
+}
+
+.secret-link:hover {
+  color: rgba(255,255,255,.65);
+  text-decoration: underline;
+}
+
+.footer-separator {
+  margin: 0 .4rem;
+  color: rgba(255,255,255,.15);
+}
+
 .fade-up {
   opacity: 0;
   transform: translateY(48px);
