@@ -21,9 +21,10 @@
     body {
       min-height: 100svh;
       margin: 0;
-      display: grid;
-      place-items: center;
-      padding: 32px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
       background:
         radial-gradient(circle at 18% 20%, rgba(70, 110, 255, 0.16), transparent 34rem),
         radial-gradient(circle at 82% 78%, rgba(180, 90, 255, 0.13), transparent 32rem),
@@ -32,11 +33,96 @@
 
     main {
       width: min(100%, 680px);
+      margin: 132px auto 0;
       padding: clamp(28px, 6vw, 56px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 28px;
       background: rgba(12, 12, 14, 0.86);
       box-shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
+    }
+
+    .site-header {
+      position: fixed;
+      top: 20px;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .header-inner {
+      width: min(1100px, calc(100% - 40px));
+      height: 64px;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 18px;
+      background: rgba(8, 8, 10, 0.55);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      text-decoration: none;
+    }
+
+    .header-inner nav,
+    .footer-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .header-inner nav a,
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .header-inner nav a:hover,
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .site-footer {
+      width: 100%;
+      padding: 96px 4px 48px;
+    }
+
+    .footer-inner {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .footer-logo,
+    .footer-copy {
+      margin: 0;
+    }
+
+    .footer-logo {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .footer-copy {
+      color: rgba(255, 255, 255, 0.36);
+      font-size: 12px;
     }
 
     .label {
@@ -112,7 +198,21 @@
     }
 
     @media (max-width: 480px) {
+      .header-inner {
+        height: 58px;
+        padding: 0 18px;
+      }
+
+      .header-inner nav {
+        gap: 14px;
+      }
+
+      .header-inner nav a {
+        font-size: 12px;
+      }
+
       main {
+        margin-top: 108px;
         border-radius: 22px;
       }
 
@@ -124,10 +224,26 @@
       .details strong {
         text-align: left;
       }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">riozaburou</a>
+      <nav aria-label="Main navigation">
+        <a href="/#works">Works</a>
+        <a href="/#profile">Profile</a>
+        <a href="/#links">Links</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
     <p class="label">Limited Download</p>
     <h1>ぬりかべパジャマ＆<br>アイマスクセット</h1>
@@ -146,5 +262,17 @@
     </a>
     <p class="note">期限を過ぎるとダウンロードできなくなります。このページは期間終了後に削除されます。</p>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-logo">riozaburou</p>
+      <div class="footer-links">
+        <a href="/#works">Works</a>
+        <a href="/#profile">Profile</a>
+        <a href="/#links">Links</a>
+      </div>
+      <p class="footer-copy">© 2026 riozaburou. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
