@@ -273,5 +273,20 @@
       <p class="footer-copy">© 2026 riozaburou. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+    if (location.pathname.startsWith("/dl/pajama-7d4e91")) {
+      document.title = "ぬりかべパジャマ | Download";
+      document.querySelector("h1").textContent = "ぬりかべパジャマ";
+
+      const detailRows = document.querySelectorAll(".details p");
+      detailRows[0].querySelector("strong").textContent = "gelato_kabe_v1.2.unitypackage";
+      detailRows[1].querySelector("strong").textContent = "約17.9 MB";
+      detailRows[2].remove();
+
+      const download = document.querySelector(".download");
+      download.href = "/api/pajama-download";
+      download.textContent = "UnityPackageをダウンロード";
+    }
+  </script>
 </body>
 </html>
