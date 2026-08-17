@@ -1,9 +1,6 @@
 const FILE_KEY = "galato_kabe_v2.0.zip";
 const DOWNLOAD_NAME = "galato_kabe_v2.0.zip";
 
-// 2026-08-16 23:59:59 JST
-const DOWNLOAD_DEADLINE = Date.UTC(2026, 7, 16, 14, 59, 59);
-
 export async function onRequest(context) {
   if (context.request.method !== "GET") {
     return new Response("Method Not Allowed", {
@@ -11,16 +8,6 @@ export async function onRequest(context) {
       headers: {
         "Allow": "GET",
         "Cache-Control": "no-store",
-      },
-    });
-  }
-
-  if (Date.now() > DOWNLOAD_DEADLINE) {
-    return new Response("このダウンロードは終了しました。", {
-      status: 410,
-      headers: {
-        "Cache-Control": "no-store",
-        "Content-Type": "text/plain; charset=utf-8",
       },
     });
   }
